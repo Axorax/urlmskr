@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./Inter-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background: #171515;
+}
+
+main {
+    min-height: calc(100vh - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+.input {
+    border-radius: 5px;
+    padding: .8rem;
+    outline: none;
+    color: #fff;
+    font-size: 16.5px;
+    background: #1c1c1c;
+    border: 1px solid #454545;
+    width: 20rem;
+    max-width: calc(100% - 1.8rem);
+    transition: 200ms;
+}
+
+.input:hover, .input:focus {
+    border-color: #537FE7;
+}
+
+.options {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.mode-button, .mask-button, .copy {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    padding: .8rem;
+    height: 44px;
+}
+
+.mode-button {
+    overflow: hidden;
+}
+
+.mode-button p {
+    text-transform: capitalize;
+    transition: 300ms;
+    font-size: 14px;
+}
+
+.mode-button {
+    flex: 1;
+    width: 140px;
+    border: 1px solid #454545;
+}
+
+.mode-button:hover, .mode-button:focus, .copy:focus, .copy:hover {
+    background: #68686818;
+}
+
+.copy {
+    border: 1px solid #454545;
+    margin-top: 2rem;
+    width: 21.7rem;
+    max-width: 100%;
+}
+
+.mask-button {
+    flex: 1;
+    width: 190px;
+    background: #537FE7;
+    transition: background 300ms;
+}
+
+.mask-button:hover, .mask-button:focus {
+    background: #446ac1;
+}
+
+.mode-options {
+    display: none;
+}
+
+.output {
+    min-height: 10rem;
+    width: 19.7rem;
+    max-width: calc(100% - 2rem);
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid #454545;
+    margin-top: 1rem;
+    background: #1c1c1c99;
+    word-wrap: break-word;
+}
+
+.info-box {
+    margin-top: 1rem;
+    background: #537FE73d;
+    border: 1px dashed #537FE7;
+    color: #a5beff;
+    border-radius: 5px;
+    width: calc(21.7rem - 0.8rem - 0.8rem);
+    max-width: calc(100% - 1.6rem) !important;
+    padding: .8rem;
+}
+
+.info-box a {
+    color: #a5beff;
+}
+
+.info-box a:hover {
+    color: #fff;
+}
