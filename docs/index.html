@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>urlmskr - Documentation</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./htmx.js" defer></script>
+    <link rel="shortcut icon" href="../assets/axorax.png" type="image/x-icon">
+</head>
+<body>
+
+    <main>
+        <div class="button_group_wrapper">
+            <div class="button_group">
+                <a href="../index.html"><button class="website"><img src="../assets/website.png" alt="Website Usage"> Website Usage</button></a>
+                <button class="api"
+                hx-get="/urlmskr/docs/api-docs"
+                hx-trigger="click"
+                hx-target="main"
+                hx-swap="outerHTML"><img src="../assets/api.png" alt="API Usage"> API Usage</button>
+            </div>
+            <div class="button_group">
+                <a href="https://github.com/Axorax/urlmskr"><button class="contribute"><img src="../assets/contribute.png" alt="Contribute"> Contribute</button></a>
+                <a href="https://www.patreon.com/axorax" target="_blank"><button class="donate"><img src="../assets/donate.png" alt="Donate"> Donate</button></a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        if (window.location.hash == '#api') {
+            const e = document.createElement('div');
+            e.innerHTML=`<div hx-get="/urlmskr/docs/api-docs"
+                hx-trigger="load delay:0"
+                hx-swap="outerHTML"
+                hx-target="main"
+            >
+            </div>`;
+            document.body.append(e);
+        }
+    </script>
+</body>
+</html>

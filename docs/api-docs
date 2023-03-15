@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <h1>API Documentation</h1>
+    <p>API URL: <a href="https://urlmskr.axorax.repl.co/">https://urlmskr.axorax.repl.co/</a></p>
+    <p>Add parameter <span class="c">r</span> with value to get a redirect masked link.</p>
+
+    <br>
+
+    <p><strong>API Example:</strong></p>
+
+    <pre><code>https://urlmskr.axorax.repl.co/?r=https://www.patreon.com/axorax</code></pre>
+
+    <p><strong>JSON Response:</strong></p>
+
+    <pre><code>{
+            "url": "https://axorax.github.io/urlmskr/aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vYXhvcmF4",
+            "query": "https://www.patreon.com/axorax",
+            "id": "aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vYXhvcmF4",
+            "mode": "redirect",
+            "success": true
+}</code></pre>
+
+    <h3>Change mode (optional)</h3>
+    <p>Add parameter <span class="c">mode</span> with the value set to the mode you want to use.</p>
+
+    <br>
+
+    <p><strong>Example</strong></p>
+
+    <pre><code>https://urlmskr.axorax.repl.co/?r=https://www.patreon.com/axorax&mode=text</code></pre>
+
+    <p><strong>JSON Response:</strong></p>
+
+    <pre><code>{
+        "url":"https://axorax.github.io/urlmskr/?t=aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vYXhvcmF4",
+        "query":"https://www.patreon.com/axorax",
+        "id":"aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vYXhvcmF4",
+        "mode":"text",
+        "success":true
+}</code></pre>
+
+    <p>The default mode is redirect.</p>
+
+    <p>Available Modes:</p>
+
+    <ul>
+        <li>redirect</li>
+        <li>text</li>
+    </ul>
+</div>

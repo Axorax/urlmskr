@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>urlmskr</title>
+    <link rel="shortcut icon" href="./assets/axorax.png" type="image/x-icon">
+</head>
+<body>
+    
+    <script>
+
+        const p = new URLSearchParams(window.location.search);
+
+        if (p.get('r')) {
+            window.location.replace(window.atob(p.get('r')));
+        } else if (p.get('t')) {
+            const e = document.createElement('p');
+            e.innerText = window.atob(p.get('t'));
+            document.body.append(e);
+            const s = document.createElement('style');
+            s.innerText=`
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                p {
+                    padding: .9rem 1.2rem;
+                    font-size: 2rem;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            `;
+            document.head.append(s);
+        } else {
+            window.location.replace('https://axorax.github.io/urlmskr/create')
+        }
+
+    </script>
+</body>
+</html>
