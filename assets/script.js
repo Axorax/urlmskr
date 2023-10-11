@@ -42,7 +42,7 @@ function modeChangeAnim(mode) {
 }
 
 function encode(value) {
-    if (value == '') {
+    if (value.trim() == '') {
         output.innerText = `Input cannot be empty. Type something properly.`;
     } else {
         let encodedValue = window.btoa(value);
