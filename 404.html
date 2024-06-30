@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <title>urlmskr</title>
+  </head>
+  <body>
+    <script>
+      const baseURL =
+        window.location.origin +
+        window.location.pathname.replace(/\/[^\/]*$/, "/");
+      const decoded = window.location.href.replace(baseURL, "");
+
+      if (decoded.toLowerCase().endsWith("+reveal")) {
+        document.head.innerHTML += '<link rel="stylesheet" href="./style.css">';
+        document.body.innerHTML = `
+          <div class="reveal center">
+              <div>
+                  <div class="top">This URL redirects to:</div>
+                  <div class="destination">${window.atob(
+                    decoded.slice(0, -7),
+                  )}</div>
+              </div>
+          </div>  
+        `;
+      } else {
+        window.location.replace(window.atob(decoded));
+      }
+    </script>
+  </body>
+</html>

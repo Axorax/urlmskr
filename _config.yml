@@ -1,0 +1,4 @@
+exclude:
+  - "*.md"
+  - .github/
+  - urlmskr.svg

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>urlmskr</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="center">
+    <div id="electric-surge"></div>
+
+    <main class="center">
+      <input id="input" type="text" placeholder="Type here..." />
+
+      <div class="group">
+        <button id="mode-button" onclick="modeChange()">
+          <p>Mode: <span>Redirect</span></p>
+        </button>
+        <button id="mask-button">Mask</button>
+      </div>
+
+      <button id="copy-button">🔗 Copy Masked URL</button>
+
+      <div class="output">
+        <span style="user-select: none">Type something to mask.</span>
+      </div>
+
+      <footer>
+        Support me on <a href="https://patreon.com/axorax">Patreon!</a>
+      </footer>
+    </main>
+  </body>
+</html>
