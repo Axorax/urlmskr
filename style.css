@@ -35,9 +35,12 @@ button {
 
 main {
   flex-direction: column;
-  height: calc(100% - 2rem);
   max-width: calc(100% - 2rem);
   width: 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(2px);
+  background: #00000020;
 }
 
 .center {

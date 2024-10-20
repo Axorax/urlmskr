@@ -89,7 +89,7 @@ function createBolt() {
   }, 800);
 }
 
-setInterval(createBolt, 600);
+setInterval(createBolt, 1000);
 
 // Stars
 
