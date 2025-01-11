@@ -1,6 +1,6 @@
 <p align="center"><img src="./urlmskr.svg"></p>
 
-<p align="center"><a href="./README.md">English</a> — <a href="./README_zh.md">中文</a> — <a href="./README_bn.md">বাংলা</a> — <a href="./README_bn.md">عربي</a> — <a href="./README_es.md">español</a></p>
+<p align="center"><a href="./README.md">English</a> — <a href="./README_zh.md">中文</a> — <a href="./README_bn.md">বাংলা</a> — <a href="./README_ar.md">عربي</a> — <a href="./README_es.md">español</a></p>
 
 # ❓ About
 
